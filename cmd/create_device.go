@@ -102,7 +102,7 @@ packet device create --hostname [hostname] --plan [plan] --facility [facility_co
 		}
 
 		if terminationTime != "" {
-			parsedTime, err := time.Parse(`"`+time.RFC3339+`"`, terminationTime)
+			parsedTime, err := time.Parse(time.RFC3339, terminationTime)
 			if err != nil {
 				fmt.Printf("Error occured while parsing time string: %s", err.Error())
 				return
